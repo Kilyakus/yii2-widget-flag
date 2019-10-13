@@ -16,7 +16,7 @@ use yii\helpers\Inflector;
 */
 class Flag extends \yii\base\Widget
 {
-	public $pluginName = 'flag';
+	// public $pluginName = 'flag';
 	public $pluginSupport = false;
 
 	const TYPE_SVG = 'svg';
@@ -46,16 +46,16 @@ class Flag extends \yii\base\Widget
 	{
 		if($this->pluginSupport === true){
 
-          $this->_supportInfo();
-          
-        }
+		  $this->_supportInfo();
+		  
+		}
 	}
 
 	public function run()
 	{
 		$assetLink = $this->registerAssetBundle();
 
-		$assetLink .= $this->flag . '.' . $this->type;
+		$assetLink .= '/' . $this->flag . '.' . $this->type;
 
 		echo Html::img($assetLink, $this->options);
 	}
@@ -69,21 +69,21 @@ class Flag extends \yii\base\Widget
 			$assetLink = $bundleClass::register($view)->baseUrl;
 		}
 
-		$this->registerPlugin($this->pluginName);
+		// $this->registerPlugin($this->pluginName);
 
 		return $assetLink;
 	}
 
 	private function _supportInfo()
-    {
-        echo "<pre>
-	For example:
+	{
+		echo "<pre>
+  For example:
 
-	echo Flag::widget([
-		'type' => Widget\Flag::TYPE_SVG,
-		'flag' => Widget\Flag::FLAG_RU,
-		'options' => [],
-	])
-          </pre>";
-    }
+  echo Flag::widget([
+  	'type' => Widget\Flag::TYPE_SVG,
+  	'flag' => Widget\Flag::FLAG_RU,
+  	'options' => [],
+  ])
+		</pre>";
+	}
 }
