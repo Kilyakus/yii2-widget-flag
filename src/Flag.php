@@ -22,9 +22,24 @@ class Flag extends \yii\base\Widget
 	const TYPE_SVG = 'svg';
 	// const TYPE_PNG = 'png';
 
-	const FLAG_RU = 'ru';
+	const FLAG_AU = 'au';
+	const FLAG_BE = 'be';
+	const FLAG_BR = 'br';
+	const FLAG_CH = 'ch';
+	const FLAG_CN = 'cn';
+	const FLAG_DE = 'de';
 	const FLAG_EN = 'en';
+	const FLAG_ES = 'es';
 	const FLAG_FR = 'fr';
+	const FLAG_GB = 'gb';
+	const FLAG_ID = 'id';
+	const FLAG_IN = 'in';
+	const FLAG_JP = 'jp';
+	const FLAG_KR = 'kr';
+	const FLAG_PT = 'pt';
+	const FLAG_RU = 'ru';
+	const FLAG_SA = 'sa';
+	const FLAG_TR = 'tr';
 
 	public $type = self::TYPE_SVG;
 
@@ -34,12 +49,7 @@ class Flag extends \yii\base\Widget
 
 	protected static $_formatTypes = [
 		self::TYPE_SVG,
-	];
-
-	protected static $_flags = [
-		self::FLAG_RU,
-		self::FLAG_EN,
-		self::FLAG_FR,
+		// self::TYPE_PNG,
 	];
 
 	public function init()
